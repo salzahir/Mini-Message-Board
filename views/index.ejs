@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <%= title %>
+    <% messages.forEach(function(message, index){ %>
+        <div>
+            <h2><%= message.text %></h2>
+            <p><%= message.user %></p>
+            <p><%= message.added %></p>
+            <a href="/details/<%= index %>">Message Details</a>      
+          </div>
+    <% }); %>
+
+    <div>
+        click <a href="/new">here</a> to add a message
+    </div>
+    
+</body>
+</html>
